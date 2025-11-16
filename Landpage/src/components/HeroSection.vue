@@ -1,45 +1,122 @@
 <template>
   <section class="hero">
-    <div class="overlay">
-      <h2>Transformando vidas com solidariedade</h2>
-      <p>A ONG Arco-Íris atua pela inclusão e apoio à comunidade.</p>
-      <a href="#sobre" class="btn">Saiba Mais</a>
+    <img
+      src="@/assets/images/banner-ongArcoiris.jpg"
+      alt="Banner ONG Arco-Íris"
+      class="hero-img"
+    />
+
+    <div class="hero-overlay">
+      <h1 class="hero-title">
+        União e Solidariedade: Construindo o Amanhã, Transformando o Agora.
+      </h1>
+
+      <button class="hero-btn" @click="scrollToAbout">
+        Saiba mais sobre nós!!
+      </button>
     </div>
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({});
+<script setup lang="ts">
+const scrollToAbout = () => {
+  const el = document.getElementById("sobre");
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 </script>
 
 <style scoped>
-.hero {
-  height: 75vh;
-  background: url("https://images.unsplash.com/photo-1526256262350-7da7584cf5eb") center/cover no-repeat;
-  position: relative;
+:host {
+  display: block;
+  padding: 0;
+  margin: 0;
 }
-.overlay {
-  background: rgba(0,0,0,0.4);
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 92vh;
+  overflow: hidden;
+
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.hero-img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- OVERLAY ---- */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 0 20px;
+
+  /* alinhamento à esquerda */
+  align-items: flex-start;
+
+  text-align: left;
+
+  background: rgba(0, 0, 0, 0.60);
+  padding: 40px 60px;
 }
-.btn {
-  margin-top: 20px;
-  background: #ff7edb;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
+
+/* ---- TEXTO ---- */
+.hero-title {
+  color: #ffffff;
+  font-size: 2.9rem;
+  font-weight: 700;
+  max-width: 900px;
+  margin-bottom: 32px;
 }
-.btn:hover {
-  background: #ff4ec7;
+
+/* ---- BOTÃO ---- */
+.hero-btn {
+  background: #1d3557;
+  color: #ffffff;
+  border: none;
+
+  padding: 15px 45px;
+  font-size: 1.2rem;
+
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* efeito hover com “movimento” */
+.hero-btn:hover {
+  background: #0d1f35;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- RESPONSIVO ---- */
+@media (max-width: 780px) {
+  .hero-overlay {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+    max-width: 95%;
+  }
+
+  .hero-btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 10px;
+  }
 }
 </style>

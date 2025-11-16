@@ -1,55 +1,67 @@
 <template>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">ONG Arco-Íris</h1>
-      <nav>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#atividades">Atividades</a></li>
-          <li><a href="#galeria">Fotos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
+  <header class="navbar">
+    <div class="navbar-content">
+      <img
+        src="@/assets/images/logo - ongArcoiris.jpg"
+        alt="Logo ONG Arco-Íris"
+        class="logo"
+      />
+
+      <nav class="nav-links">
+        <a href="#about">Sobre</a>
+        <a href="#activities">Atividades</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#contact">Contato</a>
       </nav>
     </div>
   </header>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({});
+<script setup lang="ts">
 </script>
 
 <style scoped>
-.header {
-  background: #ffffff;
-  padding: 20px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  position: sticky;
+.navbar {
+  width: 100%;
+  background-color: #1d3557;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  position: fixed;
   top: 0;
-  z-index: 99;
+  left: 0;
+  z-index: 10;
 }
-.container {
-  max-width: 1100px;
-  margin: auto;
+
+.navbar-content {
+  width: 100%;
+  max-width: 1400px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
+
 .logo {
-  color: #ff7edb;
-  font-weight: bold;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 4px;
 }
-nav ul {
+
+.nav-links {
   display: flex;
-  gap: 20px;
-  list-style: none;
+  gap: 28px;
 }
-nav a {
+
+.nav-links a {
+  color: #ffffff;
   text-decoration: none;
-  color: #444;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: 0.3s;
 }
-nav a:hover {
-  color: #ff7edb;
+
+.nav-links a:hover {
+  opacity: 0.7;
 }
 </style>
