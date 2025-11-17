@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 const scrollToAbout = () => {
-  const el = document.getElementById("sobre");
+  const el = document.getElementById("about");
   if (el) el.scrollIntoView({ behavior: "smooth" });
 };
 </script>
@@ -96,7 +96,7 @@ const scrollToAbout = () => {
 
 /* efeito hover com “movimento” */
 .hero-btn:hover {
-  background: #0d1f35;
+  background: #3d6da8;
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.35);
 }

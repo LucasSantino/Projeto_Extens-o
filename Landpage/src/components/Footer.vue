@@ -3,8 +3,16 @@
     <div class="footer-grid">
 
       <!-- COLUNA ESQUERDA -->
-      <div class="col">
-        <h2 class="ong-name">ONG ARCO-ÍRIS</h2>
+      <div class="col left-col">
+        <div class="logo-row">
+          <img
+            src="@/assets/images/Logosemfundo.png"
+            alt="Logo ONG Arco-Íris"
+            class="logo-footer"
+          />
+          <h2 class="ong-name">ONG ARCO-ÍRIS</h2>
+        </div>
+
         <p class="ong-desc">
           ONG ARCO-ÍRIS é uma organização não governamental que atende crianças,
           jovens e mulheres em vulnerabilidade social.
@@ -70,11 +78,32 @@
   gap: 90px;
 }
 
+/* ---- LOGO + NOME (CENTRALIZADOS) ---- */
+.left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a coluna */
+  text-align: center;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.logo-footer {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
 /* ---- TEXTOS ---- */
 .ong-name {
   font-size: 1.9rem;
   font-weight: 700;
-  margin-bottom: 18px;
 }
 
 .title {
@@ -151,6 +180,15 @@
 
   .social-column-container {
     margin-left: 0;
+    align-items: center;
+  }
+
+  .logo-row {
+    justify-content: center;
+  }
+
+  .left-col {
+    text-align: center;
     align-items: center;
   }
 }
