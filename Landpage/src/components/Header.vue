@@ -2,7 +2,7 @@
   <header class="navbar">
     <div class="navbar-content">
       <img
-        src="@/assets/images/logo - ongArcoiris.jpg"
+        src="@/assets/images/Logosemfundo.png"
         alt="Logo ONG Arco-Íris"
         class="logo"
       />
