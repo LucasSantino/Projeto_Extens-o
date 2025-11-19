@@ -2,4 +2,14 @@
 Repositorio para o projeto de extensão. Landpage para ONG - Arco Iris
 
 
-<img width="1919" height="974" alt="image" src="https://github.com/user-attachments/assets/9a6031ae-57e2-4c44-ac18-dbdda60e4a64" />
+| Tecnologia/Tool           | Descrição                                                   |
+| ------------------------- | ----------------------------------------------------------- |
+| **Vue 3 + Vite**          | Framework principal do frontend, performance e modularidade |
+| **TypeScript**            | Tipagem estática para maior segurança e legibilidade        |
+| **Material Icons**        | Ícones modernos utilizados em diversas seções               |
+| **CSS3**                  | Estilização customizada e responsiva                        |
+| **HTML5**                 | Estrutura das páginas                                       |
+| **Google Maps Embed API** | Exibição do mapa de localização da ONG                      |
+| **Vite dev server**       | Ambiente de desenvolvimento rápido                          |
+| **Git & GitHub**          | Versionamento do código e hospedagem                        |
+
